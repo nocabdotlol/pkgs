@@ -16,7 +16,7 @@ The `@ewanc26/croft-click` package acts as a web directory for AT Protocol impor
 - `src/lib/toolkit-usage.ts`: Pure validation, historical duplicate suppression, and aggregation.
 - `src/lib/server/toolkit-usage.ts`: Relay discovery, identity/PDS resolution, bounded pagination, and SSRF checks.
 - `src/lib/data/projects.ts`: Canonical project cards used by the page, stats, and relationship graph.
-- `lexicons/`: Source schemas for `click.croft.toolkit.use` and each tool union member.
+- `lexicons/`: Source schemas for `click.croft.toolkit.use` and each tool union member, plus `click.croft.auth.handshake` and `click.croft.billing.entitlement` used by `@ewanc26/croft-click-billing` (see `docs/croft-click/billing-design.md`).
 - `src/app.html`: Root HTML template.
 - `vite.config.ts`: Vite configuration for the web build.
 - `svelte.config.js`: SvelteKit configuration.

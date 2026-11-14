@@ -1,0 +1,38 @@
+{
+  "lexicon": 1,
+  "id": "click.croft.billing.entitlement",
+  "defs": {
+    "main": {
+      "type": "record",
+      "description": "Optional public statement, published only by the croft.click service account, that a DID may use the paid managed service until a given time. Authoritative only when read from the pinned service DID's repository; identical records in any other repository must be ignored. The record key is the subject DID. Contains no payment, Stripe or contact data. Deleted or left to expire when access ends.",
+      "key": "any",
+      "record": {
+        "type": "object",
+        "required": ["subject", "tier", "validUntil", "issuedAt"],
+        "properties": {
+          "subject": {
+            "type": "string",
+            "format": "did",
+            "description": "The entitled DID. Must equal the record key."
+          },
+          "tier": {
+            "type": "string",
+            "knownValues": ["managed"],
+            "maxLength": 64,
+            "description": "Capability tier granted on the managed service."
+          },
+          "validUntil": {
+            "type": "string",
+            "format": "datetime",
+            "description": "Access ends at this time unless the record is refreshed. Verifiers treat a past value as no entitlement."
+          },
+          "issuedAt": {
+            "type": "string",
+            "format": "datetime",
+            "description": "When the service last wrote this record."
+          }
+        }
+      }
+    }
+  }
+}

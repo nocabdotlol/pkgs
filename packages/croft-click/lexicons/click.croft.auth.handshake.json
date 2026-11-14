@@ -1,0 +1,37 @@
+{
+  "lexicon": 1,
+  "id": "click.croft.auth.handshake",
+  "defs": {
+    "main": {
+      "type": "record",
+      "description": "A short-lived, single-use proof that the repository owner asked to sign in to a croft.click managed service. Written by the user's own client under the record key the service chose; contains no billing or personal data. Safe to delete once the handshake completes.",
+      "key": "any",
+      "record": {
+        "type": "object",
+        "required": ["service", "nonce", "createdAt", "expiresAt"],
+        "properties": {
+          "service": {
+            "type": "string",
+            "format": "did",
+            "description": "DID of the croft.click service this proof is for. Verifiers reject records naming any other service."
+          },
+          "nonce": {
+            "type": "string",
+            "maxLength": 128,
+            "description": "Random value issued by the service for this challenge. Single-use."
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "datetime",
+            "description": "When the client wrote the record."
+          },
+          "expiresAt": {
+            "type": "string",
+            "format": "datetime",
+            "description": "When the challenge expires, copied from the service's challenge. Verifiers reject records past this time."
+          }
+        }
+      }
+    }
+  }
+}

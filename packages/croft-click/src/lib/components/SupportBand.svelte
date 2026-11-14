@@ -5,10 +5,13 @@
 <section class="support">
 	<div class="support-text">
 		<span class="support-icon"><Heart size={16} aria-hidden="true" /></span>
-		<h2>All of this is free</h2>
+		<h2>Free software, independently run</h2>
 		<p>
-			Every tool here runs in your browser, takes no accounts, and tracks nothing. If one of them
-			saved you an afternoon, chipping in keeps them maintained.
+			Every tool here runs in your browser, uses your AT Protocol identity instead of a separate
+			account, and tracks nothing. They're built and hosted by one developer, so free hosting
+			isn't guaranteed forever, but the code is AGPL and always yours to
+			<a href="https://github.com/ewanc26/pkgs/blob/main/MAINTENANCE.md">self-host</a>. If one of
+			them saved you an afternoon, chipping in keeps them maintained.
 		</p>
 	</div>
 
@@ -86,6 +89,12 @@
 		color: var(--muted);
 		margin: 0;
 		max-width: 46ch;
+	}
+
+	.support p a {
+		color: inherit;
+		text-decoration: underline;
+		text-underline-offset: 2px;
 	}
 
 	.support-actions {

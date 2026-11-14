@@ -27,10 +27,11 @@ Full documentation at **[docs.ewancroft.uk](https://docs.ewancroft.uk/projects/p
 | [`nix-config-tools`](./packages/nix-config-tools)                  | Nix config management tools (Rust)                                   |
 | [`llm-analyser`](./packages/llm-analyser)                          | `.docx` analysis with Ollama (Python)                                |
 | [`@ewanc26/rock-tumbl`](./packages/rock-tumbl)                     | Starter package for rock-tumbl                                       |
+| [`@ewanc26/croft-click-billing`](./packages/croft-click-billing)   | DID handshake, sessions, Stripe billing and entitlements for the croft.click managed service (private) |
 
 ## Try the tools
 
-Several of these packages ship as free, browser-based apps — no accounts, no tracking, nothing leaves your machine except to your own PDS. They live at **[croft.click](https://croft.click)**:
+Several of these packages ship as browser-based apps at **[croft.click](https://croft.click)**. They need no separate account — you sign in with your AT Protocol identity — and your imported data goes from your machine to your own PDS, not to a croft.click database:
 
 | Tool                                              | What it does                                                       |
 | ------------------------------------------------- | ------------------------------------------------------------------ |
@@ -40,9 +41,13 @@ Several of these packages ship as free, browser-based apps — no accounts, no t
 | [Bismuth](https://bismuth.croft.click)            | Convert ATProto richtext-block documents to Markdown                |
 | [Tourmaline](https://tourmaline.croft.click)      | Analyse your Teal.fm scrobbles and find your listener archetype     |
 
+### Hosted service vs. self-hosting
+
+The hosted deployments at croft.click are run independently by one developer. Free hosted use is not guaranteed indefinitely, and heavier use of the official deployments may move to a paid plan to cover running costs. That pays for the **hosted service only**: the source stays AGPL-3.0-only and you can always self-host it for free. See [`MAINTENANCE.md`](./MAINTENANCE.md) for each tool's status and what to expect from support, and [the managed-service design](./docs/croft-click/billing-design.md) for how identity and billing work.
+
 ## Support
 
-All of this is free and open source, built and maintained in my spare time. If any of it is useful to you, a one-off tip or a monthly sponsorship keeps it going:
+All of this is open source, built and maintained in my spare time. If any of it is useful to you, a one-off tip or a monthly sponsorship keeps it going. It's voluntary and separate from paying for hosted access:
 
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/ewancroft)
 [![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-30363D?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sponsors/ewanc26)
